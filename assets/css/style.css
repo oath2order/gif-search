@@ -1,0 +1,11 @@
+body{
+	background-image: url(../images/green_dust_scratch.png);
+}
+
+.row{
+	padding-top: 30px;
+}
+.col-md-10{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
