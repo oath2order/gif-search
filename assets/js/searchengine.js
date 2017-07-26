@@ -17,6 +17,13 @@ $(document).ready(function() {
     $("#newtopic").on("keypress", function(e) {
         if (e.keyCode == 13) {
             e.preventDefault();
+
+            var $form = $(this);
+            $.post($form.attr("action"), $form.serialize()).then(function() {
+              alert("Thank you!");
+            });
+
+
             var newTopic = this.value;
             renderButton(newTopic);
         }
