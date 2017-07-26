@@ -20,6 +20,7 @@ $(document).ready(function() {
 
             var $form = $(this);
             $.post($form.attr("action"), $form.serialize()).then(function() {
+              console.log($form.serialize())
               alert("Thank you!");
             });
 
@@ -35,7 +36,6 @@ function buildURL(topic) {
     console.log(topic)
     queryURL = protocol + domain + path + "?api_key=" + apiKey + "&q=" + topic + "&limit=" + limit;
     $("#content").empty();
-    console.log(queryURL)
     renderContent();
 }
 //render sidebar buttons
